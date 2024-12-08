@@ -1,0 +1,72 @@
+.customer-list {
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
+.customer-list__container {
+    width: 968px;
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-left: 38px;
+    padding-right: 44px;
+    padding-bottom: 20px;
+}
+
+.customer-list__search-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.customer-list__search-info {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.customer-list__header {
+    font-family: Poppins, serif;
+    color: #000000;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 33px;
+    text-align: left;
+}
+
+.customer-list__active-members {
+    color: #16c098;
+    font-family: Poppins, serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: left;
+}
+
+.customer-list__input-container {
+    width: 216px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.customer-list__search-icon {
+    left: 8px;
+    position: absolute;
+}
+
+.customer-list__input {
+    border: none;
+    width: 100%;
+    border-radius: 10px;
+    background-color: #f9fbff;
+    padding: 10px 40px;
+}
+
+.customer-list__input::placeholder {
+    color: #b5b7c0;
+    font-family: Poppins, serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+}

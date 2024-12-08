@@ -6,7 +6,9 @@
         <title>Dashboard</title>
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
+
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
         <link
             href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
             rel="stylesheet"
@@ -23,8 +25,10 @@
                             href="./src/img/sprite/symbol-defs.svg#icon-setting-1"
                         ></use>
                     </svg>
-                    <h2 class="sidebar__title">Dashboard</h2>
-                    <p class="sidebar__version">v.01</p>
+                    <div class="sidebar__container-info">
+                        <h2 class="sidebar__title">Dashboard</h2>
+                        <p class="sidebar__version">v.01</p>
+                    </div>
                 </div>
                 <ul class="sidebar__list">
                     <li class="sidebar__item">
@@ -82,7 +86,11 @@
                                 >Customers</a
                             >
                         </div>
-                        <svg class="sidebar__arrow" width="16" height="16">
+                        <svg
+                            class="sidebar__arrow--active"
+                            width="16"
+                            height="16"
+                        >
                             <use
                                 href="./src/img/sprite/symbol-defs.svg#icon-Vector-26"
                             ></use>
@@ -146,66 +154,260 @@
                         </svg>
                     </li>
                 </ul>
-                <div class="user-info">
-                    <img src="avatar.jpg" alt="User Avatar" />
-                    <p>Evano</p>
-                    <p>Project Manager</p>
+                <div class="sidebar__user-info-container">
+                    <img
+                        class="sidebar__user-avatar"
+                        src="./src/img/userAvatar/Ellipse 8.jpeg"
+                        alt="User Avatar"
+                    />
+                    <div>
+                        <p class="sidebar__user-name">Evano</p>
+                        <p class="sidebar__user-position">Project Manager</p>
+                    </div>
                 </div>
             </aside>
             <main class="main-content">
                 <header>
-                    <h1>Hello Evano 👋</h1>
+                    <h1 class="header__main">Hello Evano 👋,</h1>
                 </header>
                 <section class="customer-list">
-                    <h2>All Customers</h2>
-                    <div class="search-bar">
-                        <input type="text" placeholder="Search" />
-                    </div>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Customer Name</th>
-                                <th>Company</th>
-                                <th>Phone Number</th>
-                                <th>Email</th>
-                                <th>Country</th>
-                                <th>Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Jane Cooper</td>
-                                <td>Microsoft</td>
-                                <td>(225) 555-0118</td>
-                                <td>jane@microsoft.com</td>
-                                <td>United States</td>
-                                <td>
-                                    <span class="status active">Active</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Floyd Miles</td>
-                                <td>Yahoo</td>
-                                <td>(205) 555-0100</td>
-                                <td>floyd@yahoo.com</td>
-                                <td>Kiribati</td>
-                                <td>
-                                    <span class="status inactive"
-                                        >Inactive</span
-                                    >
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="pagination">
-                        <button>&lt;</button>
-                        <button class="active">1</button>
-                        <button>2</button>
-                        <button>3</button>
-                        <button>4</button>
-                        <button>...</button>
-                        <button>40</button>
-                        <button>&gt;</button>
+                    <div class="customer-list__container">
+                        <div class="customer-list__search-container">
+                            <div class="customer-list__search-info">
+                                <h2 class="customer-list__header">
+                                    All Customers
+                                </h2>
+                                <p class="customer-list__active-members">
+                                    Active Members
+                                </p>
+                            </div>
+                            <div class="customer-list__input-container">
+                                <svg
+                                    class="customer-list__search-icon"
+                                    width="24"
+                                    height="24"
+                                >
+                                    <use
+                                        href="./src/img/sprite/symbol-defs.svg#icon-search-1"
+                                    ></use>
+                                </svg>
+                                <input
+                                    class="customer-list__input"
+                                    type="text"
+                                    placeholder="Search"
+                                />
+                            </div>
+                        </div>
+                        <table class="main-table">
+                            <thead class="table-head">
+                                <tr class="table-head__container">
+                                    <th class="table-head__info">
+                                        Customer Name
+                                    </th>
+                                    <th class="table-head__info">Company</th>
+                                    <th class="table-head__info">
+                                        Phone Number
+                                    </th>
+                                    <th class="table-head__info">Email</th>
+                                    <th class="table-head__info">Country</th>
+                                    <th class="table-head__info">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="table-head__row">
+                                    <td class="table-body__info">
+                                        Jane Cooper
+                                    </td>
+                                    <td class="table-body__info">Microsoft</td>
+                                    <td class="table-body__info">
+                                        (225) 555-0118
+                                    </td>
+                                    <td class="table-body__info">
+                                        jane@microsoft.com
+                                    </td>
+                                    <td class="table-body__info">
+                                        United States
+                                    </td>
+                                    <td>
+                                        <button
+                                            type="button"
+                                            class="table-body__button--active"
+                                        >
+                                            Active
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table-body__info">
+                                        Floyd Miles
+                                    </td>
+                                    <td class="table-body__info">Yahoo</td>
+                                    <td class="table-body__info">
+                                        (205) 555-0100
+                                    </td>
+                                    <td class="table-body__info">
+                                        floyd@yahoo.com
+                                    </td>
+                                    <td class="table-body__info">Kiribati</td>
+                                    <td class="table-body__info">
+                                        <button
+                                            type="button"
+                                            class="table-body__button--inactive"
+                                        >
+                                            Inactive
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table-body__info">
+                                        Floyd Miles
+                                    </td>
+                                    <td class="table-body__info">Yahoo</td>
+                                    <td class="table-body__info">
+                                        (205) 555-0100
+                                    </td>
+                                    <td class="table-body__info">
+                                        ronald@adobe.com
+                                    </td>
+                                    <td class="table-body__info">Israel</td>
+                                    <td class="table-body__info">
+                                        <button
+                                            type="button"
+                                            class="table-body__button--inactive"
+                                        >
+                                            Inactive
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table-body__info">
+                                        Marvin McKinney
+                                    </td>
+                                    <td class="table-body__info">Tesla</td>
+                                    <td class="table-body__info">
+                                        (252) 555-0126
+                                    </td>
+                                    <td class="table-body__info">
+                                        marvin@tesla.com
+                                    </td>
+                                    <td class="table-body__info">Iran</td>
+                                    <td>
+                                        <button
+                                            type="button"
+                                            class="table-body__button--active"
+                                        >
+                                            Active
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table-body__info">
+                                        Jerome Bell
+                                    </td>
+                                    <td class="table-body__info">Google</td>
+                                    <td class="table-body__info">
+                                        (629) 555-0129
+                                    </td>
+                                    <td class="table-body__info">
+                                        jerome@google.com
+                                    </td>
+                                    <td class="table-body__info">Réunion</td>
+                                    <td>
+                                        <button
+                                            type="button"
+                                            class="table-body__button--active"
+                                        >
+                                            Active
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table-body__info">
+                                        Kathryn Murphy
+                                    </td>
+                                    <td class="table-body__info">Microsoft</td>
+                                    <td class="table-body__info">
+                                        (406) 555-0120
+                                    </td>
+                                    <td class="table-body__info">
+                                        kathryn@microsoft.com
+                                    </td>
+                                    <td class="table-body__info">Curaçao</td>
+                                    <td>
+                                        <button
+                                            type="button"
+                                            class="table-body__button--active"
+                                        >
+                                            Active
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table-body__info">
+                                        Jacob Jones
+                                    </td>
+                                    <td class="table-body__info">Yahoo</td>
+                                    <td class="table-body__info">
+                                        (208) 555-0112
+                                    </td>
+                                    <td class="table-body__info">
+                                        jacob@yahoo.com
+                                    </td>
+                                    <td class="table-body__info">Brazil</td>
+                                    <td>
+                                        <button
+                                            type="button"
+                                            class="table-body__button--active"
+                                        >
+                                            Active
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table-body__info">
+                                        Kristin Watson
+                                    </td>
+                                    <td class="table-body__info">Facebook</td>
+                                    <td class="table-body__info">
+                                        (704) 555-0127
+                                    </td>
+                                    <td class="table-body__info">
+                                        kristin@facebook.com
+                                    </td>
+                                    <td class="table-body__info">
+                                        Åland Islands
+                                    </td>
+                                    <td>
+                                        <button
+                                            type="button"
+                                            class="table-body__button--inactive"
+                                        >
+                                            Inactive
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="pagination__container">
+                            <p class="pagination__info">
+                                Showing data 1 to 8 of 256K entries
+                            </p>
+                            <div class="pagination__buttons">
+                                <button class="pagination__button">&lt;</button>
+                                <button
+                                    class="pagination__button pagination__button--active"
+                                >
+                                    1
+                                </button>
+                                <button class="pagination__button">2</button>
+                                <button class="pagination__button">3</button>
+                                <button class="pagination__button">4</button>
+                                <p class="pagination__more">...</p>
+                                <button class="pagination__button">40</button>
+                                <button class="pagination__button">&gt;</button>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </main>
