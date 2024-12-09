@@ -16,6 +16,7 @@ body {
 .main-content {
     width: 100%;
     background-color: #fafbff;
-    padding-top: 41px;
     margin: 0 auto;
+    padding-left: 71px;
+    padding-top: 41px;
 }

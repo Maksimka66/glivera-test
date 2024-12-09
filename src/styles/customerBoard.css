@@ -1,5 +1,5 @@
 .main-table {
-    table-layout: fixed; /* Фиксированная структура для таблицы */
+    table-layout: fixed;
     width: 100%;
     font-size: 14px;
     text-align: left;
