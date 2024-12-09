@@ -1,15 +1,20 @@
 .main-table {
+    table-layout: fixed; /* Фиксированная структура для таблицы */
     width: 100%;
-    border-collapse: separate;
     font-size: 14px;
     text-align: left;
     margin-bottom: 30px;
+    display: grid;
+    gap: 34px;
 }
 
-.table-head {
+.table-head__row {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
 }
 
-.table-head__container::after {
+.table-head__row::after {
     content: "";
     position: absolute;
     bottom: -12px;
@@ -17,10 +22,6 @@
     width: 100%;
     height: 1px;
     background-color: #e5e7eb;
-}
-
-.table-head__container {
-    position: relative;
 }
 
 .table-head__info {
@@ -32,8 +33,30 @@
     text-align: left;
 }
 
-.table-head__row {
-    margin-bottom: 12px;
+.table-body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+.table-body__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 18px;
+    position: relative;
+}
+
+.table-body__row::after {
+    content: "";
+    position: absolute;
+    bottom: -18px;
+    left: 0;
+    width: 888px;
+    height: 1px;
+    background-color: #e5e7eb;
 }
 
 .table-body__info {
@@ -43,6 +66,11 @@
     font-weight: 500;
     line-height: 21px;
     text-align: left;
+    display: flex;
+    justify-content: flex-start;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .table-body__button--active {
